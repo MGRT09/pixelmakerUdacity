@@ -1,0 +1,42 @@
+<!--- pixel maker for Udacity course --->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lab: Pixel Art Maker</h1>
+<!--- Allow user to select a size of grid--->
+    <h2>Choose Grid Size</h2>
+    
+    <form id="sizePicker">
+        Grid Height:
+        <input type="number" id="input_height" name="height">
+        Grid Width:
+        <input type="number" id="input_width" name="width">  
+    </form>
+    <button type="submit" onclick="makeGrid()">Click</button>
+ 
+<!--- Allow users to select colours as they work--->
+    <h2>Pick A Color</h2>
+    <input type="color" id="colorPicker" name="colorPicker" value="#ff0000" onchange="colorSelect()"/>
+
+<!--- Design Canvas to changes size when dimensions are added--->
+    <h2>Design Canvas</h2>
+        <div id="table-wrap">
+			<table id="drawGrid" style="cursor: pointer";>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+    
+    <script src="designs.js"></script>
+</body>
+</html>
